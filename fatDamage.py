@@ -1,15 +1,21 @@
+#speed calculation (Dnd has speed in sp/6sec and I need it in mps)
+#1 ft/s = 0.681818 mph
+sp = 25 #change this to players speed
+baseSec = 6 #this is based on the turn speed in dnd
+fts = round(sp/baseSec)
+spCalc = sp*0.681818
+
 #Damage Calculator For Borbus Roll
 import random
 print('Here is the damage based on my math')
-sp = 25
+sp = spCalc
 w = 400
-d = random.randint(1,12)
+d = random.randint(2,12)
 print('Speed:',sp," Weight:",w," Dice Roll:",d)
-damage = ((((sp/12)*(w/5))-(w/3))+d)-10
+damage = ((((sp/8)*(w/5))-(w/3))+d)-10
 damage1 = round(damage)
 print('Borbus Damage: ',damage1)
 
-#Other Claculators 
 #Here is what his force should be
 #A throwing hammer does 1d6 bludgeoning
 #thats around 700lbs of force, that being said we can assume that for
@@ -20,7 +26,7 @@ print('|')
 print('Here is what it should actually be based on DND:')
 print('(This is based on the amount of force from bludgeoning and their rolls, etc)')
 print('|')
-sp = 25 #Speed is the most important factor, it make damage go up faster than weight ever will
+sp = spCalc
 w = 400
 d = 985
 v = w/d
@@ -42,8 +48,9 @@ print('Rolls:',pointsList)
 p2 = sum(pointsList)
 print('Borbus Damage: ',p2)
 
+#29-39 for my calculations 
+#9-54 for real damage
+#however they both usually roll ~30-40... Like almost every time
 
 
-
-#This is a python file that does the damage of a character I made, his whole thing is that he is really fat and rolls into enemies. Change the sp to the speed he is moving and the w to his current weight. I think my equation is more balanced but I tried matching it to dnd and real life physics as well
 
