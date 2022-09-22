@@ -1,3 +1,12 @@
+import random
+#roll to hit
+ac = 15 #just an average ac
+attackRoll = (random.randint(1,20)+2)
+if(ac > attackRoll):
+    print('Miss')
+else:
+    print('Hit')
+
 #speed calculation (Dnd has speed in sp/6sec and I need it in mps)
 #1 ft/s = 0.681818 mph
 sp = 25 #change this to players speed
@@ -6,15 +15,6 @@ fts = round(sp/baseSec)
 spCalc = sp*0.681818
 
 #Damage Calculator For Borbus Roll
-import random
-print('Here is the damage based on my math')
-sp = spCalc
-w = 400
-d = random.randint(2,12)
-print('Speed:',sp," Weight:",w," Dice Roll:",d)
-damage = ((((sp/8)*(w/5))-(w/3))+d)-10
-damage1 = round(damage)
-print('Borbus Damage: ',damage1)
 
 #Here is what his force should be
 #A throwing hammer does 1d6 bludgeoning
@@ -48,9 +48,7 @@ print('Rolls:',pointsList)
 p2 = sum(pointsList)
 print('Borbus Damage: ',p2)
 
-#29-39 for my calculations 
-#9-54 for real damage
-#however they both usually roll ~30-40... Like almost every time
+#9-54 for real damage if you have a speed of 25 and a weight of 400
 
 
 
