@@ -9,7 +9,8 @@ def cracking(winComboList,i):
         checkNum(i,winComboList)
     else:
         print('You unlocked it!')
-        exit
+        print('Now you can go again if you want!')
+        changeLock()
         
 def checkNum(i,winComboList):
     num = str(input('What is the next number? '))
