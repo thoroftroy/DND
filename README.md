@@ -14,4 +14,4 @@ Calculates the force and the amount of damage that a human being in DND 5e would
 
 Lock Tester
 ----------------------------------
-input a string of numbers 1-9 that is 9 didgets long and then type what your guesses are for it. If you get it wrong it crashes but you can go number by number to try and get the combo right. THis can be used for puzzles and things 
+input any number of characters (ex 1498631, ee8fau31h, @#CYihW&^(*$) and then have someone else try and guess the password one character at a time, if they get anyhting wrong then it will reset the password (this will be fixed later)
