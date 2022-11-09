@@ -14,4 +14,4 @@ Calculates the force and the amount of damage that a human being in DND 5e would
 
 Lock Tester
 ----------------------------------
-input any number of characters (ex 1498631, ee8fau31h, @#CYihW&^(*$) and then have someone else try and guess the password one character at a time, if they get anyhting wrong then it will reset the password (this will be fixed later)
+input any number of characters (ex 1498631, ee8fau31h, @#CYihW&^(*$) and then have someone else try and guess the password one character at a time, if they get anyhting wrong then it will reset to the begining of the password (this is just a simple combonation lock). Type 'exit' to leave the guessing halfway through, make sure to guess only one character at a time, currently it will always be wrong if you hit more than one character at a time even if you have the right passcode. 
