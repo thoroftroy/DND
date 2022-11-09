@@ -1,9 +1,9 @@
 # DND
 This is for things that help with my dungeons and dragons stuff
 ------------------------------------
-Just some damage caclulations, maybe a boss fight or cataluoge later. Simply run the program from the terminal to use the program
-in linux type 'python3 locktester.py' or whatever the name of the program is.
-in windows type 'python locktester.py' or whatever the name of the program is. 
+Just some damage caclulations, maybe a boss fight or cataluoge later. Simply run the program from the terminal to use the program.
+In linux type 'python3 locktester.py' or whatever the name of the program is.
+In windows type 'python locktester.py' or whatever the name of the program is. 
 Make sure that the terminal is open in the directory that the file is saved in or cd into it. 
 
 
