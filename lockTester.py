@@ -14,20 +14,20 @@ def cracking(winComboList,i,listLen):
         changeLock()
         
 def checkNum(i,winComboList,listLen):
-    num = str(input('What is the next number? '))
+    num = str(input('What is the next symbol? (type exit to give up) '))
     if(num == winComboList[i]):
         print('Yes!')
         print('')
         time.sleep(0.25)
         cracking(winComboList,i,listLen)
+    elif(num == 'exit'):
+        changeLock()
     else:
         print('Click! The switches reset!')
-        #i = -1
-        print('THE PASSWORD HAS BEEN RESET TO THE DEFAULT (123456789)')
+        i = -1
         print('')
         time.sleep(0.25)
-        changeLock()
-        #cracking(i,winComboList,listLen)
+        cracking(winComboList,i,listLen)
         
     
 #but this can be changed
