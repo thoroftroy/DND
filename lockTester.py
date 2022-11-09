@@ -39,7 +39,12 @@ def changeLock():
         print('Changing Lock...')
         winCombo = input('Type numbers in order of lock with no spaces (ex: 768594321 [it can be more than 9 characters]) ')
         print(winCombo,' Is the new lock Number')
-        print(' ')
+        time.sleep(0.5)
+        print('|')
+        time.sleep(0.5)
+        waitTime = ["|", "|", "|", "|", "|", "|", "|", "|", "|", "|", "|", "|", "|", "|", "|", "|", "|", "|", "|", "|", "|", "|", "|", "|", "|", "|", "|", "|", "|", "|", "|", "|"]
+        for x in waitTime:
+            print(x)
         convStr(winCombo,i,listLen)
     elif(change == '1') | (change == 'no') | (change == 'No'):
         print('Keeping Current Lock')
