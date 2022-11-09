@@ -23,6 +23,7 @@ def checkNum(i,winComboList,listLen):
     else:
         print('Click! The switches reset!')
         #i = -1
+        print('THE PASSWORD HAS BEEN RESET TO THE DEFAULT (123456789)')
         print('')
         time.sleep(0.25)
         changeLock()
