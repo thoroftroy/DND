@@ -35,18 +35,18 @@ def changeLock():
     i = -1
     listlen = 9
     change = str(input('Do you want to change preset lock? (0=yes 1=no 2=exit) '))
-    if(change == '0'):
+    if(change == '0') | (change == 'yes') | (change == 'Yes'):
         print('Changing Lock...')
         winCombo = input('Type numbers in order of lock with no spaces (ex: 768594321 [it can be more than 9 characters]) ')
         print(winCombo,' Is the new lock Number')
         print(' ')
         convStr(winCombo,i,listLen)
-    elif(change == '1'):
+    elif(change == '1') | (change == 'no') | (change == 'No'):
         print('Keeping Current Lock')
         print(' ')
         winCombo = winComboDef
         convStr(winCombo,i,listLen)
-    elif(change == '2'):
+    elif(change == '2') | (change == 'exit') | (change == 'Exit'):
         exit
     else:
         print('Try Again')
