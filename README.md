@@ -19,6 +19,6 @@ Lock Tester
 -----------------------------------
 input any number of characters (ex 1498631, ee8fau31h, @#CYihW&^(*$) and then have someone else try and guess the password one character at a time, if they get anyhting wrong then it will reset to the begining of the password (this is just a simple combonation lock). Type 'exit' to leave the guessing halfway through, make sure to guess only one character at a time, currently it will always be wrong if you hit more than one character at a time even if you have the right passcode. 
 
-Rand Lock Tester
+Rand Lock Tester (Never gonna work)
 -----------------------------------
-Same as the lock tester but the lock is randomized, currently tells you the password and crashes on start so it doesn't work at all.
+Same as the lock tester but the lock is randomized, currently tells you the password and crashes on start so it doesn't work at all. This functionality is going to be added to the lock tester (it might already be there)
