@@ -5,7 +5,7 @@ listLen = 'null'
 winComboDef = '123456789'
 #now lets let the user try to crack the code
 def cracking(winComboList,i,listLen):
-    i = i + 1
+    i += 1
     if(i<listLen):
         checkNum(i,winComboList,listLen)
     else:
@@ -22,10 +22,11 @@ def checkNum(i,winComboList,listLen):
         cracking(winComboList,i,listLen)
     else:
         print('Click! The switches reset!')
-        i = -1
+        #i = -1
         print('')
         time.sleep(0.25)
-        cracking(i,winComboList,listLen)
+        changeLock()
+        #cracking(i,winComboList,listLen)
         
     
 #but this can be changed
