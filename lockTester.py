@@ -6,9 +6,44 @@ listLen = 'null'
 winComboDef = '123456789'
 #now lets let the user try to crack the code
 def randomize(winCombo,i,listLen):
-    winCombo = str(random.randint(1,1000000000000))
-    convStr(winCombo,i,listLen)
-    
+    typeChoose = input('How many didgets do you want it to be? (1-10 didgets or random to randomize it) ')
+    if(typeChoose == '1'):
+        winCombo = str(random.randint(1,9))
+        convStr(winCombo,i,listLen)
+    elif(typeChoose == '2'):
+        winCombo = str(random.randint(1,99))
+        convStr(winCombo,i,listLen)
+    elif(typeChoose == '3'):
+        winCombo = str(random.randint(1,999))
+        convStr(winCombo,i,listLen)
+    elif(typeChoose == '4'):
+        winCombo = str(random.randint(1,9999))
+        convStr(winCombo,i,listLen)
+    elif(typeChoose == '5'):
+        winCombo = str(random.randint(1,99999))
+        convStr(winCombo,i,listLen)
+    elif(typeChoose == '6'):
+        winCombo = str(random.randint(1,999999))
+        convStr(winCombo,i,listLen)
+    elif(typeChoose == '7'):
+        winCombo = str(random.randint(1,9999999))
+        convStr(winCombo,i,listLen)
+    elif(typeChoose == '8'):
+        winCombo = str(random.randint(1,99999999))
+        convStr(winCombo,i,listLen)
+    elif(typeChoose == '9'):
+        winCombo = str(random.randint(1,999999999))
+        convStr(winCombo,i,listLen)
+    elif(typeChoose == '10'):
+        winCombo = str(random.randint(1,9999999999))
+        convStr(winCombo,i,listLen)
+    elif(typeChoose == 'random'):
+        winCombo = str(random.randint(1,random.randint(1,9999999999)))
+        convStr(winCombo,i,listLen)
+    else:
+        print('Please input a valid number')
+        randomize(winCombo,i,listLen)
+
 def cracking(winComboList,i,listLen):
     i += 1
     if(i<listLen):
