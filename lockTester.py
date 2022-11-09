@@ -18,7 +18,7 @@ def checkNum(i,winComboList,listLen):
     if(num == winComboList[i]):
         print('Yes!')
         print('')
-        time.sleep(0.25)
+        time.sleep(0.15)
         cracking(winComboList,i,listLen)
     elif(num == 'exit'):
         changeLock()
@@ -26,7 +26,7 @@ def checkNum(i,winComboList,listLen):
         print('Click! The switches reset!')
         i = -1
         print('')
-        time.sleep(0.25)
+        time.sleep(0.15)
         cracking(winComboList,i,listLen)
         
     
@@ -57,5 +57,5 @@ def convStr(winCombo,i,listLen):
     listLen = int(len(winComboList))
     cracking(winComboList,i,listLen)
     
-
+print('Default password is \'123456789\'')
 changeLock()
