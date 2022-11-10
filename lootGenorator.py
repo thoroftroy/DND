@@ -16,17 +16,17 @@ enemies = ['humaniod','undead','undead humanoid','dwarf','elf','imp','fay']
 prefix = 'null'
 
 def randomizeChestLevel():
-    chestLevel = random.randint(1,45)
+    chestLevel = random.randint(1,85)
     if(chestLevel==1)|(chestLevel==2)|(chestLevel==3)|(chestLevel==4)|(chestLevel==5)|(chestLevel==6)|(chestLevel==7)|(chestLevel==8):
         chestType = random.randint(1,3)
         randomizeChestLoot(chestType)
-    elif(chestLevel==9)|(chestLevel==10)|(chestLevel==11)|(chestLevel==12)|(chestLevel==13)|(chestLevel==14):
+    elif(chestLevel==9)|(chestLevel==10)|(chestLevel==11)|(chestLevel==12)|(chestLevel==13)|(chestLevel==14)|(chestLevel==14)|(chestLevel==18)|(chestLevel==19)|(chestLevel==20)|(chestLevel==21)|(chestLevel==22):
         chestType = random.randint(2,4)
         randomizeChestLoot(chestType)
-    elif(chestLevel==15)|(chestLevel==16)|(chestLevel==17):
+    elif(chestLevel==40)|(chestLevel==41)|(chestLevel==42):
         chestType = random.randint(3,5)
         randomizeChestLoot(chestType)
-    elif(chestLevel==20):
+    elif(chestLevel==80):
         chestType = random.randint(5,7)
         randomizeChestLoot(chestType)
     else:
@@ -112,3 +112,4 @@ def startFunction():
     convStr(chestsOpened)
 
 startFunction()
+
