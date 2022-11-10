@@ -109,7 +109,7 @@ def convStr(chestsOpened):
 def startFunction():
     print('|')
     print('|')
-    print('ONLY TYPE NUMBERS (ex: 2, 53, 1439805183)')
+    print('ONLY TYPE NUMBERS (ex: 2, 53, 1439805183 [no decimals])')
     chestsOpened = input('How many chests would you like to open? ')
     if chestsOpened.isdigit() == True:
         chestsOpened = int(chestsOpened)
@@ -117,7 +117,7 @@ def startFunction():
         convStr(chestsOpened)
     else:
         print('|')
-        print(chestsOpened,"IS NOT A NUMBER!!!!")
+        print(chestsOpened,"IS NOT A VALID NUMBER!!!!")
         startFunction()
     
 
