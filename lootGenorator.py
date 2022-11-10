@@ -16,7 +16,7 @@ enemies = ['humaniod','undead','undead humanoid','dwarf','elf','imp','fay']
 prefix = 'null'
 
 def randomizeChestLevel():
-    chestLevel = random.randint(1,40)
+    chestLevel = random.randint(1,45)
     if(chestLevel==1)|(chestLevel==2)|(chestLevel==3)|(chestLevel==4)|(chestLevel==5)|(chestLevel==6)|(chestLevel==7)|(chestLevel==8):
         chestType = random.randint(1,3)
         randomizeChestLoot(chestType)
@@ -55,7 +55,7 @@ def getLoot(chestType,loot):
         while (count < 10):   
             count = count + 1
             time.sleep(0.25)
-            prefix = random.randint(1,6)
+            prefix = random.randint(1,4)
             print("You gained",prefix,uncommon[random.randint(1,len(uncommon)-1)])
     elif(chestType == 3):
         count = random.randint(3,7)
