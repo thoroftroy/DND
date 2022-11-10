@@ -7,9 +7,9 @@ common = ['Bone(s)','Leather Scrap(s)','Poor Quality Cloth(s)','Cobweb(s)','Copp
 uncommon = ['Silver Coin(s)','Bottle(s) of Oil','ft of rope','Bag(s) of Sand','Torch(es)','Anti-toxin(s)','Small Healing Potion(s)']
 rare = ['Rusty Knife(s)','Old Cap(s)','Rusty Chainmail Shirt(s)','Rusty Chain Leggings','Old Leather Boots','Fire Arrow(s)','Crowbar(s)']
 superRare = ['Golden Coin(s)','Good Leather','Firestarter(s)','Canteen(s)','Oil Lantern(s)','Healing Potion(s)','Molatov(s)','Bottle(s) of Mana']
-ultraRare = ['copper sword','copper helmet','copper chestplate','copper leggings','good bow','quarterstaff','wand','magic staff','mase','low quiality gem']
-legendary = ['platinum coin','ruby','sapphire','diamond','emerald','enchanted sword','opal','obsidian sphere','golden sheild','plated helmet','plate mail chestplate','plate mail leggings','plate mail boots','good iron sword']
-mythical = ['magic tome','ring of wishes','staff of healing','ring of free action','ring of +1 bonus action','ring of loot','greater healing potion','sword of power','necrotic arrow quiver','bottle of poison','pan\'s cheese','flamethrower','cap of invisability','wine of dionysus']
+ultraRare = ['Copper sword(s)','Copper Helmet(s)','Copper Chestplate(s)','Copper Leggings(s)','Good Bow(s)','Quarterstaff(s)','Wand(s)','Magic Staff(s)','Mase(s)','Low Quiality Gem(s)']
+legendary = ['Platinum Coin','Ruby','Sapphire','Diamond','Emerald','Enchanted Sword','Opal','Obsidian Sphere','Golden Sheild','Plated Helmet','Plate Mail Chestplate','Plate Mail Leggings','Plate Mail Boots','Good Iron Sword']
+mythical = ['Magic Tome','Ring of Wishes','Staff of Healing','Ring of Free Action','Ring of +1 Bonus Action','Ring of Loot','Greater Healing Potion','Sword of Power','Necrotic Arrow Quiver','Bottle of Poison','Pan\'s Cheese','Flamethrower','Cap of Invisability','Wine of Dionysus']
 #here is the types of chest in list form
 cType = ['Common','Uncommon','Rare','Super Rare','Ultra Rare','Legendary','Mythical']
 enemies = ['humaniod','undead','undead humanoid','dwarf','elf','imp','fay']
@@ -39,7 +39,7 @@ def randomizeChestLoot(chestType):
     getLoot(chestType,loot)
 
 def getLoot(chestType,loot):
-    print('Genorating loot....')
+    print('Generating loot....')
     time.sleep(0.5)
     print('...')
     time.sleep(0.5)
@@ -100,7 +100,7 @@ def convStr(chestsOpened):
     count = 0
     while (count < chestsOpened):   
         count = count + 1
-        time.sleep(0.15)
+        time.sleep(0.1)
         print('|')
         print('|')
         randomizeChestLevel()
