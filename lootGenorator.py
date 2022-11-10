@@ -3,12 +3,12 @@ import time
 import random
 
 #lets assign some loot
-common = ['Bone(s)','Leather Scrap(s)','Poor Quality Cloth(s)','Cobweb(s)','Copper Coin(s)','Old Food Scrap(s)','Pile(s) of Dust','Twig(s)','Bundle(s) of String','Arrow(s)','Slime']
-uncommon = ['Silver Coin(s)','Bottle(s) of Oil','ft of rope','Bag(s) of Sand','Torch(es)','Anti-toxin(s)','Small Healing Potion(s)']
-rare = ['Rusty Knife(s)','Old Cap(s)','Rusty Chainmail Shirt(s)','Rusty Chain Leggings','Old Leather Boots','Fire Arrow(s)','Crowbar(s)']
-superRare = ['Golden Coin(s)','Good Leather','Firestarter(s)','Canteen(s)','Oil Lantern(s)','Healing Potion(s)','Molatov(s)','Bottle(s) of Mana']
+common = ['Bone(s)','Leather Scrap(s)','Poor Quality Cloth(s)','Cobweb(s)','Copper Coin(s)','Old Food Scrap(s)','Pile(s) of Dust','Twig(s)','Bundle(s) of String','Arrow(s)','Slime','Pebbles','Rotting Meat Sack(s)','Rotten Wood Chunk(s)','Beatle Carcas(es)','Rope Scrap(s)','Rotten Bannana(s)','Cracked Glass Bottle(s)','Old Broken Key(s)','Ripped Bag(s)','Moldy Bread Chunk(s)','Old Silver Spoon(s)','Screw(s)','Rusty Nail(s)']
+uncommon = ['Silver Coin(s)','Bottle(s) of Oil','ft of rope','Bag(s) of Sand','Torch(es)','Anti-toxin(s)','Small Healing Potion(s)','Small Magnet(s)','Empty Glass Bottle(s)','Small Sack(s)']
+rare = ['Rusty Knife(s)','Old Cap(s)','Rusty Chainmail Shirt(s)','Rusty Chain Leggings','Old Leather Boots','Fire Arrow(s)','Crowbar(s)','Marble(s)']
+superRare = ['Golden Coin(s)','Good Leather','Firestarter(s)','Canteen(s)','Oil Lantern(s)','Healing Potion(s)','Molatov(s)','Bottle(s) of Mana','Chicken Nugget(s)','Large Magnet(s)','Jar(s) of Pickels']
 ultraRare = ['Copper sword(s)','Copper Helmet(s)','Copper Chestplate(s)','Copper Leggings(s)','Good Bow(s)','Quarterstaff(s)','Wand(s)','Magic Staff(s)','Mase(s)','Low Quiality Gem(s)']
-legendary = ['Platinum Coin','Ruby','Sapphire','Diamond','Emerald','Enchanted Sword','Opal','Obsidian Sphere','Golden Sheild','Plated Helmet','Plate Mail Chestplate','Plate Mail Leggings','Plate Mail Boots','Good Iron Sword']
+legendary = ['Platinum Coin','Ruby','Sapphire','Diamond','Emerald','Enchanted Sword','Opal','Obsidian Sphere','Golden Sheild','Plated Helmet','Plate Mail Chestplate','Plate Mail Leggings','Plate Mail Boots','Good Iron Sword','Multitool']
 mythical = ['Magic Tome','Ring of Wishes','Staff of Healing','Ring of Free Action','Ring of +1 Bonus Action','Ring of Loot','Greater Healing Potion','Sword of Power','Necrotic Arrow Quiver','Bottle of Poison','Pan\'s Cheese','Flamethrower','Cap of Invisability','Wine of Dionysus']
 #here is the types of chest in list form
 cType = ['Common','Uncommon','Rare','Super Rare','Ultra Rare','Legendary','Mythical']
@@ -107,6 +107,8 @@ def convStr(chestsOpened):
     startFunction()
     
 def startFunction():
+    print('|')
+    print('|')
     print('ONLY TYPE NUMBERS (ex: 2, 53, 1439805183)')
     chestsOpened = int(input('How many chests would you like to open? '))
     print('Opening',chestsOpened,'chests!')
