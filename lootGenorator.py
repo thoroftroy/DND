@@ -40,56 +40,56 @@ def randomizeChestLoot(chestType):
 
 def getLoot(chestType,loot):
     print('Generating loot....')
-    time.sleep(0.5)
+    time.sleep(0.1)
     print('...')
-    time.sleep(0.5)
+    time.sleep(0.1)
     if(chestType == 1):
         count = random.randint(1,5)
         while (count < 10):   
             count = count + 1
-            time.sleep(0.05)
+            time.sleep(0.005)
             prefix = random.randint(1,10)
             print("You gained",prefix,common[random.randint(1,len(common)-1)])
     elif(chestType == 2):
         count = random.randint(2,6)
         while (count < 10):   
             count = count + 1
-            time.sleep(0.05)
+            time.sleep(0.005)
             prefix = random.randint(1,4)
             print("You gained",prefix,uncommon[random.randint(1,len(uncommon)-1)])
     elif(chestType == 3):
         count = random.randint(3,7)
         while (count < 10):   
             count = count + 1
-            time.sleep(0.05)
+            time.sleep(0.005)
             prefix = random.randint(1,2)
             print("You gained",prefix,rare[random.randint(1,len(rare)-1)])
     elif(chestType == 4):
         count = random.randint(6,8)
         while (count < 10):   
             count = count + 1
-            time.sleep(0.05)
+            time.sleep(0.005)
             prefix = 1
             print("You gained",prefix,superRare[random.randint(1,len(superRare)-1)])
     elif(chestType == 5):
         count = random.randint(7,9)
         while (count < 10):   
             count = count + 1
-            time.sleep(0.05)
+            time.sleep(0.005)
             prefix = 1
             print("You gained",prefix,ultraRare[random.randint(1,len(ultraRare)-1)])
     elif(chestType == 6):
         count = 9
         while (count < 10):   
             count = count + 1
-            time.sleep(0.05)
+            time.sleep(0.005)
             prefix = 1
             print("You gained",prefix,legendary[random.randint(1,len(legendary)-1)])
     elif(chestType == 7):
         count = 9
         while (count < 10):   
             count = count + 1
-            time.sleep(0.05)
+            time.sleep(0.005)
             prefix = 1
             print("You gained",prefix,mythical[random.randint(1,len(mythical)-1)])
     else:
@@ -100,13 +100,14 @@ def convStr(chestsOpened):
     count = 0
     while (count < chestsOpened):   
         count = count + 1
-        time.sleep(0.1)
+        time.sleep(0.01)
         print('|')
         print('|')
         randomizeChestLevel()
     startFunction()
     
 def startFunction():
+    print('ONLY TYPE NUMBERS (ex: 2, 53, 1439805183)')
     chestsOpened = int(input('How many chests would you like to open? '))
     print('Opening',chestsOpened,'chests!')
     convStr(chestsOpened)
