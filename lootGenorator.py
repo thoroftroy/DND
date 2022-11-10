@@ -40,9 +40,9 @@ def randomizeChestLoot(chestType):
 
 def getLoot(chestType,loot):
     print('Generating loot....')
-    time.sleep(0.1)
+    time.sleep(0.25)
     print('...')
-    time.sleep(0.1)
+    time.sleep(0.25)
     if(chestType == 1):
         count = random.randint(1,5)
         while (count < 10):   
