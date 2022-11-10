@@ -18,7 +18,7 @@ prefix = 'null'
 def randomizeChestLevel():
     chestLevel = random.randint(1,85)
     if(chestLevel==1)|(chestLevel==2)|(chestLevel==3)|(chestLevel==4)|(chestLevel==5)|(chestLevel==6)|(chestLevel==7)|(chestLevel==8):
-        chestType = random.randint(1,3)
+        chestType = random.randint(2,3)
         randomizeChestLoot(chestType)
     elif(chestLevel==9)|(chestLevel==10)|(chestLevel==11)|(chestLevel==12)|(chestLevel==13)|(chestLevel==14)|(chestLevel==14)|(chestLevel==18)|(chestLevel==19)|(chestLevel==20)|(chestLevel==21)|(chestLevel==22):
         chestType = random.randint(2,4)
@@ -112,4 +112,3 @@ def startFunction():
     convStr(chestsOpened)
 
 startFunction()
-
