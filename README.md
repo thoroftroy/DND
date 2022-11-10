@@ -22,3 +22,7 @@ input any number of characters (ex 1498631, ee8fau31h, @#CYihW&^(*$) and then ha
 Rand Lock Tester (Never gonna work)
 -----------------------------------
 Same as the lock tester but the lock is randomized, currently tells you the password and crashes on start so it doesn't work at all. This functionality is going to be added to the lock tester (it might already be there)
+
+Loot Genorator
+-----------------------------------
+Type the number of chests you want to genorate and get randomized loot
