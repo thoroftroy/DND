@@ -110,8 +110,15 @@ def startFunction():
     print('|')
     print('|')
     print('ONLY TYPE NUMBERS (ex: 2, 53, 1439805183)')
-    chestsOpened = int(input('How many chests would you like to open? '))
-    print('Opening',chestsOpened,'chests!')
-    convStr(chestsOpened)
+    chestsOpened = input('How many chests would you like to open? ')
+    if chestsOpened.isdigit() == True:
+        chestsOpened = int(chestsOpened)
+        print('Opening',chestsOpened,'chests!')
+        convStr(chestsOpened)
+    else:
+        print('|')
+        print(chestsOpened,"IS NOT A NUMBER!!!!")
+        startFunction()
+    
 
 startFunction()
