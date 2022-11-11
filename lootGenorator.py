@@ -115,6 +115,13 @@ def startFunction():
         chestsOpened = int(chestsOpened)
         print('Opening',chestsOpened,'chests!')
         convStr(chestsOpened)
+    elif chestsOpened.isdigit() == False:
+        if(chestsOpened == 'exit') | (chestsOpened == 'Exit'):
+            exit
+        else:
+            print('|')
+            print(chestsOpened,"IS NOT A VALID NUMBER!!!!")
+            startFunction()
     else:
         print('|')
         print(chestsOpened,"IS NOT A VALID NUMBER!!!!")
