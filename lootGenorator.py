@@ -118,6 +118,36 @@ def startFunction():
     elif chestsOpened.isdigit() == False:
         if(chestsOpened == 'exit') | (chestsOpened == 'Exit'):
             exit
+        elif(chestsOpened == 'uncommon') | (chestsOpened == 'Uncommon'):
+            print('You cheeter')
+            chestType = 2
+            randomizeChestLoot(chestType)
+            startFunction()
+        elif(chestsOpened == 'rare') | (chestsOpened == 'Rare'):
+            print('You cheeter')
+            chestType = 3
+            randomizeChestLoot(chestType)
+            startFunction()
+        elif(chestsOpened == 'super rare') | (chestsOpened == 'Super Rare'):
+            print('You cheeter')
+            chestType = 4
+            randomizeChestLoot(chestType)
+            startFunction()
+        elif(chestsOpened == 'ultra rare') | (chestsOpened == 'Ultra Rare'):
+            print('You cheeter')
+            chestType = 5
+            randomizeChestLoot(chestType)
+            startFunction()
+        elif(chestsOpened == 'legendary') | (chestsOpened == 'Legendary'):
+            print('You cheeter')
+            chestType = 6
+            randomizeChestLoot(chestType)
+            startFunction()
+        elif(chestsOpened == 'Mythical') | (chestsOpened == 'mythical'):
+            print('You cheeter')
+            chestType = 7
+            randomizeChestLoot(chestType)
+            startFunction()
         else:
             print('|')
             print(chestsOpened,"IS NOT A VALID NUMBER!!!!")
