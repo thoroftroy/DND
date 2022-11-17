@@ -118,6 +118,11 @@ def startFunction():
     elif chestsOpened.isdigit() == False:
         if(chestsOpened == 'exit') | (chestsOpened == 'Exit'):
             exit
+        elif(chestsOpened == 'common') | (chestsOpened == 'Common'):
+            print('You cheeter')
+            chestType = 1
+            randomizeChestLoot(chestType)
+            startFunction()
         elif(chestsOpened == 'uncommon') | (chestsOpened == 'Uncommon'):
             print('You cheeter')
             chestType = 2
