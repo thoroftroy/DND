@@ -38,8 +38,6 @@ def roll():
     print("|")
 #main loop
 def whatDoYouWant():
-    print("What would you like to know?")
-    print("(EX: directions [this will tell you where to go], should I do... [it will tell you if you should]")
     what = input()
     if(what == "directions"):
         rollDir()
@@ -51,6 +49,9 @@ def whatDoYouWant():
             cryptMessage()
         else:
             roll()
+    print("What would you like to know now?")
     whatDoYouWant()
     
+print("What would you like to know?")
+print("(EX: directions [this will tell you where to go], should I do... [it will tell you if you should]")
 whatDoYouWant()
