@@ -53,5 +53,5 @@ def whatDoYouWant():
     whatDoYouWant()
     
 print("What would you like to know?")
-print("(EX: directions [this will tell you where to go], should I do... [it will tell you if you should]")
+print("(EX: directions [this will tell you where to go], should I do... [it will tell you if you should])")
 whatDoYouWant()
