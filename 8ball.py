@@ -5,11 +5,11 @@ import time
 futures = ["Yes","No","Of course not","Follow your heart","That is correct","What do you think?","I would say yes?"]
 directions = ['north','south','east','west','up','left','down','right']
 #do this, adj, to a, time, urgency
-cryptMssg1 = ["Follow the","Eat a","Drink the","Trust a","Play with the","Act like a","Prevent the"]
-cryptMssg2 = ["yellow", "red","slimey", "fast", "orange","blue","quiet","smart"]
-cryptMssg3 = ["bear"," chicken"," friend","enemy"," monster", "preist"," waffle","monkey","student"]
-cryptMssg4 = ["for a while","sometime soon","before sundown","tomorow","any time soon","when the time is right","to lift the fear"]
-cryptMssg5 = ["quickly, before it's too late!","OR DIE!","hurry, you must do this!","to save a loved one","or your friend will die","to save the day"]
+cryptMssg1 = ["Follow the","Eat a","Drink the","Trust a","Play with the","Act like a","Prevent the","Be aware of the attack from the","Watch out for the","Choose to listen to the","Divert the"]
+cryptMssg2 = ["yellow", "red","slimey", "fast", "orange","blue","quiet","smart","dangorus","evil","bloody","light","pretty","soft","gentle","radiant"]
+cryptMssg3 = ["bear","chicken"," friend","enemy","monster", "preist"," waffle","monkey","student","zombie","ghost","master","ally","gladiator","fighter","mage","magic caster","witch","water"]
+cryptMssg4 = ["for a while","sometime soon","before sundown","tomorow","any time soon","when the time is right","to lift the fear","at night"]
+cryptMssg5 = ["quickly, before it's too late!","OR DIE!","hurry, you must do this!","to save a loved one","or your friend will die","to save the day","to help the town"]
 
 #say something cryptic
 def cryptMessage():
