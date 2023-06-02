@@ -5,7 +5,7 @@ import time
 def rollSpecs(roll):
     howMany = 0
     howMany = int(input("How many dice do you want to roll? "))
-    whatDice = input("What dice would you like to roll? [d4, d6, d8, d10, d12, d20] ")
+    whatDice = input("What dice would you like to roll? [d4, d6, d8, d10, d12, d20, d100] ")
     rollMod = int(input("What would you like to add to the roll? "))
     while howMany != 0:
         rollADice(roll,whatDice)
@@ -16,7 +16,7 @@ def rollSpecs(roll):
 def rollSpecsRigged(roll):
     howMany = 0
     howMany = int(input("How many dice do you want to roll? "))
-    whatDice = input("What dice would you like to roll? [d4, d6, d8, d10, d12, d20] ")
+    whatDice = input("What dice would you like to roll? [d4, d6, d8, d10, d12, d20, d100] ")
     rollMod = int(input("What would you like to add to the roll? "))
     while howMany != 0:
         rollRiggedDice(roll,whatDice)
@@ -27,7 +27,7 @@ def rollSpecsRigged(roll):
 def rollSpecsBad(roll):
     howMany = 0
     howMany = int(input("How many dice do you want to roll? "))
-    whatDice = input("What dice would you like to roll? [d4, d6, d8, d10, d12, d20] ")
+    whatDice = input("What dice would you like to roll? [d4, d6, d8, d10, d12, d20, d100] ")
     rollMod = int(input("What would you like to add to the roll? "))
     while howMany != 0:
         rollBadDice(roll,whatDice)
@@ -51,6 +51,8 @@ def rollADice(roll,whatDice):
         rollTemp = random.randint(1,12)
     elif whatDice == "d20":
         rollTemp = random.randint(1,20)
+    elif whatDice == "d100":
+    	rollTemp = random.randint(1,100)
     else:
         print("Defaulting to d20")
         rollTemp = random.randint(1,20)
@@ -73,6 +75,8 @@ def rollRiggedDice(roll, whatDice):
         rollTemp = random.randint(9,12)
     elif whatDice == "d20":
         rollTemp = random.randint(14,20)
+    elif whatDice == "d100":
+    	rollTemp = random.randint(74,100)
     else:
         print("Defaulting to d20")
         rollTemp = random.randint(14,20)
@@ -95,6 +99,8 @@ def rollBadDice(roll, whatDice):
         rollTemp = random.randint(1,6)
     elif whatDice == "d20":
         rollTemp = random.randint(1,10)
+    elif whatDice == "d100":
+    	rollTemp = random.randint(1,30)
     else:
         print("Defaulting to d20")
         rollTemp = random.randint(1,10)
