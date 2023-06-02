@@ -2,6 +2,9 @@
 import random
 import time
 
+modifiers = [8,1,5,-3,-3,2]
+savingModifiers = [11,1,8,-3,-3,-2]
+
 def rollSpecs(roll):
     howMany = 0
     howMany = int(input("How many dice do you want to roll? "))
@@ -126,6 +129,18 @@ def main():
             time.sleep(0.01)
             print("|")
             times -= 1
+    elif action == "d20":
+    	print("Rolled: ", random.randint(1,20))
+    elif action == "saving throw":
+    	print("type the number index of which throw you are doing")
+    	throw = int(input("str, dex, con, int, wis, cha "))
+    	savingThrowRoll = random.randint(1,20)+savingModifiers[throw]
+    	print("Saving Throw: ",savingThrowRoll)
+    elif action == "skill check":
+    	print("type the number index of which throw you are doing")
+    	check = int(input("str, dex, con, int, wis, cha "))
+    	skillCheckRoll = random.randint(1,20)+modifiers[check]
+    	print("Skill Check: ",skillCheckRoll)
     else:
         print("That is not a valid action")
     main()
