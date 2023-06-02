@@ -143,6 +143,7 @@ def main():
     	print("Skill Check: ",skillCheckRoll)
     elif action == "list actions" or action == "6":
     	print("roll, rigged roll, bad roll, clear, d20, saving throw, skill check")
+    	print("  0 	   1 	     2 		    3 	      4 	   5")
     else:
         print("That is not a valid action")
     main()
