@@ -33,4 +33,7 @@ A simple dice roller that can be rigged if you so choose. This can be usefull if
 Type "roll" or "roll0" to roll a normal dice
 Type "roll rigged" or "roll1" to roll a rigged dice (this will always be a somewhat high number)
 Type "bad roll" or "roll2" to roll a rigged dice (this will always be a low number)
+Type "skill check" to do a skill check quickly
+Type "saving thow" to do a saving throw quickly
+Type "d20" to roll a d20 (this is a shortcut for if you only roll one and aren't adding anything)
 Type "clear" to clear the screen
