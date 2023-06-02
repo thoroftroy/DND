@@ -30,6 +30,7 @@ Type the number of chests you want to genorate and get randomized loot
 Rigged Dice Roller
 -----------------------------------
 A simple dice roller that can be rigged if you so choose. This can be usefull if you want to cheese a roll to make things harder or easier for your players but still want a computer doing some of it. 
-Type "roll" to roll a normal dice
-Type "roll rigged" to roll a rigged dice (this will always be a somewhat high number)
+Type "roll" or "roll0" to roll a normal dice
+Type "roll rigged" or "roll1" to roll a rigged dice (this will always be a somewhat high number)
+Type "bad roll" or "roll2" to roll a rigged dice (this will always be a low number)
 Type "clear" to clear the screen
