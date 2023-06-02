@@ -23,6 +23,17 @@ def rollSpecsRigged(roll):
         howMany -= 1
     roll.append(rollMod)
     total(roll)
+    
+def rollSpecsBad(roll):
+    howMany = 0
+    howMany = int(input("How many dice do you want to roll? "))
+    whatDice = input("What dice would you like to roll? [d4, d6, d8, d10, d12, d20] ")
+    rollMod = int(input("What would you like to add to the roll? "))
+    while howMany != 0:
+        rollBadDice(roll,whatDice)
+        howMany -= 1
+    roll.append(rollMod)
+    total(roll)
 
 def rollADice(roll,whatDice):
     rollTemp = 0
@@ -45,7 +56,6 @@ def rollADice(roll,whatDice):
         rollTemp = random.randint(1,20)
     print(rollTemp," Rolled")
     roll.append(rollTemp)
-    
 
 def rollRiggedDice(roll, whatDice):
     rollTemp = 0
@@ -69,6 +79,28 @@ def rollRiggedDice(roll, whatDice):
     print(rollTemp," Rolled")
     roll.append(rollTemp)
 
+def rollBadDice(roll, whatDice):
+    rollTemp = 0
+    print("Rolling...")
+    time.sleep(0.1)
+    if whatDice == "d4":
+        rollTemp = random.randint(1,2)
+    elif whatDice == "d6":
+        rollTemp = random.randint(1,3)
+    elif whatDice == "d8":
+        rollTemp = random.randint(1,4)
+    elif whatDice == "d10":
+        rollTemp = random.randint(1,5)
+    elif whatDice == "d12":
+        rollTemp = random.randint(1,6)
+    elif whatDice == "d20":
+        rollTemp = random.randint(1,10)
+    else:
+        print("Defaulting to d20")
+        rollTemp = random.randint(1,10)
+    print(rollTemp," Rolled")
+    roll.append(rollTemp)
+
 def total(roll):
     rollTotal = sum(roll)
     print(rollTotal," is the current total")
@@ -76,10 +108,12 @@ def total(roll):
 def main():
     roll = []
     action = input("What do you want to do? ")
-    if action == "roll":
+    if action == "roll" or action == "roll0":
         rollSpecs(roll)
-    elif action == "rigged roll":
+    elif action == "rigged roll" or action == "roll1":
         rollSpecsRigged(roll)
+    elif action == "bad roll" or action == "roll2":
+    	rollSpecsBad(roll)
     elif action == "clear":
         times = 25
         while times != 0:
