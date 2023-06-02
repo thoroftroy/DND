@@ -117,11 +117,11 @@ def total(roll):
 def main():
     roll = []
     action = input("What do you want to do? ")
-    if action == "roll" or action == "roll0":
+    if action == "roll" or action == "0":
         rollSpecs(roll)
-    elif action == "rigged roll" or action == "roll1":
+    elif action == "rigged roll" or action == "1":
         rollSpecsRigged(roll)
-    elif action == "bad roll" or action == "roll2":
+    elif action == "bad roll" or action == "2":
     	rollSpecsBad(roll)
     elif action == "clear":
         times = 25
@@ -129,20 +129,23 @@ def main():
             time.sleep(0.01)
             print("|")
             times -= 1
-    elif action == "d20":
+    elif action == "d20" or action == "3":
     	print("Rolled: ", random.randint(1,20))
-    elif action == "saving throw":
+    elif action == "saving throw" or action == "4":
     	print("type the number index of which throw you are doing")
     	throw = int(input("str, dex, con, int, wis, cha "))
     	savingThrowRoll = random.randint(1,20)+savingModifiers[throw]
     	print("Saving Throw: ",savingThrowRoll)
-    elif action == "skill check":
+    elif action == "skill check" or action == "5":
     	print("type the number index of which throw you are doing")
     	check = int(input("str, dex, con, int, wis, cha "))
     	skillCheckRoll = random.randint(1,20)+modifiers[check]
     	print("Skill Check: ",skillCheckRoll)
+    elif action == "list actions" or action == "6":
+    	print("roll, rigged roll, bad roll, clear, d20, saving throw, skill check")
     else:
         print("That is not a valid action")
     main()
 
+print("Type 'list actions' to see what you can do ")
 main()
