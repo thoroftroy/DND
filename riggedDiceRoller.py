@@ -196,13 +196,9 @@ def main():
     		check = 0
     	skillCheckRoll = random.randint(1,20)+modifiers[check]
     	print(modiferNames[check],"Skill Check: ",skillCheckRoll)
-    elif action == "list actions" or action == "6":
+    elif action == "list actions" or action == "list" or action == "6":
     	print("roll, rigged roll, bad roll, d20, saving throw, skill check, list actions, clear")
-    	print("  0 	   1 	     2 	    3 	      4 	 5,	    	6,	    7")
-    elif action == "":
-    	print("|")
-    	print("(Type 'list actions' to view valid actions)")
-    	print("|")
+    	print("  0 	   1 	     2 	      3 	4 	    5,	    	6,	    7")
     elif action == "d4":
     	print("Rolled a d4:",random.randint(1,4))
     elif action == "d6":
@@ -217,6 +213,7 @@ def main():
     	print("Rolled a d100:",random.randint(1,100))
     else:
         print("That is not a valid action")
+        print("(Type 'list actions' to view valid actions)")
     main()
 
 print("Type 'list actions' to see what you can do ")
