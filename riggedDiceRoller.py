@@ -4,12 +4,23 @@ import time
 
 modifiers = [8,1,5,-3,-3,2]
 savingModifiers = [11,1,8,-3,-3,-2]
+modiferNames = ["Strength", "Dexterity", "Constittion","Intelligence", "Wisdom", "Charisma"]
 
 def rollSpecs(roll):
     howMany = 0
-    howMany = int(input("How many dice do you want to roll? "))
+    howMany = input("How many dice do you want to roll? ")
+    if(howMany.isnumeric() == True):
+    	howMany = int(howMany)
+    else:
+    	print("That is not a number, defaulting to 1")
+    	howMany = 1
     whatDice = input("What dice would you like to roll? [d4, d6, d8, d10, d12, d20, d100] ")
-    rollMod = int(input("What would you like to add to the roll? "))
+    rollMod = input("What would you like to add to the roll? ")
+    if(rollMod.isnumeric() == True):
+    	rollMod = int(rollMod)
+    else:
+    	print("That is not a valid number, defaulting to 0")
+    	rollMod = 0
     while howMany != 0:
         rollADice(roll,whatDice)
         howMany -= 1
@@ -18,9 +29,19 @@ def rollSpecs(roll):
     
 def rollSpecsRigged(roll):
     howMany = 0
-    howMany = int(input("How many dice do you want to roll? "))
+    howMany = input("How many dice do you want to roll? ")
+    if(howMany.isnumeric() == True):
+    	howMany = int(howMany)
+    else:
+    	print("That is not a number, defaulting to 1")
+    	howMany = 1
     whatDice = input("What dice would you like to roll? [d4, d6, d8, d10, d12, d20, d100] ")
-    rollMod = int(input("What would you like to add to the roll? "))
+    rollMod = input("What would you like to add to the roll? ")
+    if(rollMod.isnumeric() == True):
+    	rollMod = int(rollMod)
+    else:
+    	print("That is not a valid number, defaulting to 0")
+    	rollMod = 0
     while howMany != 0:
         rollRiggedDice(roll,whatDice)
         howMany -= 1
@@ -29,9 +50,19 @@ def rollSpecsRigged(roll):
     
 def rollSpecsBad(roll):
     howMany = 0
-    howMany = int(input("How many dice do you want to roll? "))
+    howMany = input("How many dice do you want to roll? ")
+    if(howMany.isnumeric() == True):
+    	howMany = int(howMany)
+    else:
+    	print("That is not a number, defaulting to 1")
+    	howMany = 1
     whatDice = input("What dice would you like to roll? [d4, d6, d8, d10, d12, d20, d100] ")
-    rollMod = int(input("What would you like to add to the roll? "))
+    rollMod = input("What would you like to add to the roll? ")
+    if(rollMod.isnumeric() == True):
+    	rollMod = int(rollMod)
+    else:
+    	print("That is not a valid number, defaulting to 0")
+    	rollMod = 0
     while howMany != 0:
         rollBadDice(roll,whatDice)
         howMany -= 1
@@ -123,7 +154,7 @@ def main():
         rollSpecsRigged(roll)
     elif action == "bad roll" or action == "2":
     	rollSpecsBad(roll)
-    elif action == "clear":
+    elif action == "clear" or action == "cls" or action == "7":
         times = 25
         while times != 0:
             time.sleep(0.01)
@@ -132,18 +163,46 @@ def main():
     elif action == "d20" or action == "3":
     	print("Rolled: ", random.randint(1,20))
     elif action == "saving throw" or action == "4":
+    	throw = None
     	print("type the number index of which throw you are doing")
-    	throw = int(input("str, dex, con, int, wis, cha "))
+    	print("0,   1,   2,   3,   4,   5")
+    	throw = input("str, dex, con, int, wis, cha ")
+    	if(throw.isnumeric() == True):
+    		throw = int(throw)
+    		if throw >= 0 and throw <= 6:
+    			pass
+    		else:
+    			print("Invalid numarical index, defaulting to 0")
+    			throw = 0
+    	else:
+    		print("Invalid numarical index, defaulting to 0")
+    		throw = 0
     	savingThrowRoll = random.randint(1,20)+savingModifiers[throw]
-    	print("Saving Throw: ",savingThrowRoll)
+    	print(modiferNames[throw],"Saving Throw: ",savingThrowRoll)
     elif action == "skill check" or action == "5":
+    	check = 0
     	print("type the number index of which throw you are doing")
-    	check = int(input("str, dex, con, int, wis, cha "))
+    	print("0,   1,   2,   3,   4,   5")
+    	check = input("str, dex, con, int, wis, cha ")
+    	if(check.isnumeric() == True):
+    		check = int(check)
+    		if check >= 0 and check <= 6:
+    			pass
+    		else:
+    			print("Invalid numarical index, defaulting to 0")
+    			check = 0
+    	else:
+    		print("Invalid numarical index, defaulting to 0")
+    		check = 0
     	skillCheckRoll = random.randint(1,20)+modifiers[check]
-    	print("Skill Check: ",skillCheckRoll)
+    	print(modiferNames[check],"Skill Check: ",skillCheckRoll)
     elif action == "list actions" or action == "6":
-    	print("roll, rigged roll, bad roll, clear, d20, saving throw, skill check")
-    	print("  0 	   1 	     2 		    3 	      4 	   5")
+    	print("roll, rigged roll, bad roll, d20, saving throw, skill check, list actions, clear")
+    	print("  0 	   1 	     2 	    3 	      4 	 5,	    	6,	    7")
+    elif action == "":
+    	print("|")
+    	print("(Type 'list actions' to view valid actions)")
+    	print("|")
     else:
         print("That is not a valid action")
     main()
