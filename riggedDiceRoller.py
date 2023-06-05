@@ -161,7 +161,7 @@ def main():
             print("|")
             times -= 1
     elif action == "d20" or action == "3":
-    	print("Rolled: ", random.randint(1,20))
+    	print("Rolled a d20:",random.randint(1,20))
     elif action == "saving throw" or action == "4":
     	throw = None
     	print("type the number index of which throw you are doing")
@@ -203,6 +203,18 @@ def main():
     	print("|")
     	print("(Type 'list actions' to view valid actions)")
     	print("|")
+    elif action == "d4":
+    	print("Rolled a d4:",random.randint(1,4))
+    elif action == "d6":
+    	print("Rolled a d6:",random.randint(1,6))
+    elif action == "d8":
+    	print("Rolled a d8:",random.randint(1,8))
+    elif action == "d10":
+    	print("Rolled a d10:",random.randint(1,10))
+    elif action == "d12":
+    	print("Rolled a d12:",random.randint(1,12))
+    elif action == "d100":
+    	print("Rolled a d100:",random.randint(1,100))
     else:
         print("That is not a valid action")
     main()
