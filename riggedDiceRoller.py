@@ -25,7 +25,7 @@ def rollSpecs(roll):
         rollADice(roll,whatDice)
         howMany -= 1
     roll.append(rollMod)
-    total(roll)
+    total(roll,rollMod)
     
 def rollSpecsRigged(roll):
     howMany = 0
@@ -46,7 +46,7 @@ def rollSpecsRigged(roll):
         rollRiggedDice(roll,whatDice)
         howMany -= 1
     roll.append(rollMod)
-    total(roll)
+    total(roll,rollMod)
     
 def rollSpecsBad(roll):
     howMany = 0
@@ -67,7 +67,7 @@ def rollSpecsBad(roll):
         rollBadDice(roll,whatDice)
         howMany -= 1
     roll.append(rollMod)
-    total(roll)
+    total(roll,rollMod)
 
 def rollADice(roll,whatDice):
     rollTemp = 0
@@ -141,9 +141,9 @@ def rollBadDice(roll, whatDice):
     print(rollTemp," Rolled")
     roll.append(rollTemp)
 
-def total(roll):
+def total(roll,rollMod):
     rollTotal = sum(roll)
-    print(rollTotal," is the current total")
+    print(rollTotal," is the current total (",rollMod,"added to total [",rollTotal-rollMod,"total-mod] )")
 
 def main():
     roll = []
