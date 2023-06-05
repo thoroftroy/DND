@@ -146,36 +146,35 @@ def total(roll,rollMod):
     print(rollTotal," is the current total (",rollMod,"added to total [",rollTotal-rollMod,"total-mod] )")
 
 def rollSpecialNumber():
-    floatOrInt = input("Do you want the numbers to include decimals? [y or n]")
+    floatOrInt = input("Do you want the numbers to include decimals in the roll? [y or n] ")
     if floatOrInt == "yes" or floatOrInt == "Yes" or floatOrInt == "y":
-        sRollMin = input("What do you want the MINimum number to be?")
+        sRollMin = input("What do you want the MINimum number to be? ")
         if(sRollMin.isnumeric() == True):
             sRollMin = float(sRollMin)
         else:
             sRollMin = float(0)
             print("Invalid selection, defaulting to 0")
-        sRollMax = input("What do you want the MAXimum number to be?")
+        sRollMax = input("What do you want the MAXimum number to be? ")
         if(sRollMax.isnumeric() == True):
             sRollMax = float(sRollMax)
         else:
             sRollMax = float(10)
             print("Invalid selection, defaulting to 10")
-            print("Roll:",random.uniform(sRollMin, sRollMax))
+        print("Roll:",random.uniform(sRollMin, sRollMax))
     else:
-        sRollMin = input("What do you want the MINimum number to be?")
+        sRollMin = input("What do you want the MINimum number to be? ")
         if(sRollMin.isnumeric() == True):
             sRollMin = int(sRollMin)
         else:
             sRollMin = int(0)
         print("Invalid selection, defaulting to 0")
-        sRollMax = input("What do you want the MAXimum number to be?")
+        sRollMax = input("What do you want the MAXimum number to be? ")
         if(sRollMax.isnumeric() == True):
             sRollMax = int(sRollMax)
         else:
             sRollMax = int(10)
             print("Invalid selection, defaulting to 10")
         print("Roll:",random.randint(sRollMin,sRollMax))
-	
 
 def main():
     roll = []
