@@ -167,7 +167,7 @@ def rollSpecialNumber():
             sRollMin = int(sRollMin)
         else:
             sRollMin = int(0)
-        print("Invalid selection, defaulting to 0")
+            print("Invalid selection, defaulting to 0")
         sRollMax = input("What do you want the MAXimum number to be? ")
         if(sRollMax.isnumeric() == True):
             sRollMax = int(sRollMax)
