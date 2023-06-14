@@ -13,7 +13,7 @@ def rollSpecs(roll):
         howMany = int(howMany)
     else:
         print("That is not a number, defaulting to 1")
-    howMany = 1
+        howMany = 1
     whatDice = input("What dice would you like to roll? [d4, d6, d8, d10, d12, d20, d100] ")
     rollMod = input("What would you like to add to the roll? ")
     if(rollMod.isnumeric() == True):
