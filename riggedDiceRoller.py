@@ -1,19 +1,25 @@
 #Program to roll a dice
 import random
 import time
+import math
 
-modifiers = [8,1,5,-3,-3,2]
-savingModifiers = [11,1,8,-3,-3,-2]
+#modifiers = [8,1,5,-3,-3,2]	#Stats for Thadicus
+#savingModifiers = [11,1,8,-3,-3,-2]	#Stats for Thadicus
+modifiers = [0,5,1,0,-1,3]	#Stats for Soren
+savingModifiers = [0,5,1,0,-1,3]	#Stats for Soren
 modiferNames = ["Strength", "Dexterity", "Constittion","Intelligence", "Wisdom", "Charisma"]
 
 def rollSpecs(roll):
     howMany = 0
+    howManyAvg = 0
     howMany = input("How many dice do you want to roll? ")
     if(howMany.isnumeric() == True):
         howMany = int(howMany)
+        howManyAvg = int(howMany)
     else:
         print("That is not a number, defaulting to 1")
         howMany = 1
+        howManyAvg = 1
     whatDice = input("What dice would you like to roll? [d4, d6, d8, d10, d12, d20, d100] ")
     rollMod = input("What would you like to add to the roll? ")
     if(rollMod.isnumeric() == True):
@@ -25,16 +31,19 @@ def rollSpecs(roll):
         rollADice(roll,whatDice)
         howMany -= 1
     roll.append(rollMod)
-    total(roll,rollMod)
+    total(roll,rollMod,howManyAvg)
     
 def rollSpecsRigged(roll):
     howMany = 0
+    howManyAvg = 0
     howMany = input("How many dice do you want to roll? ")
     if(howMany.isnumeric() == True):
         howMany = int(howMany)
+        howManyAvg = int(howMany)
     else:
         print("That is not a number, defaulting to 1")
         howMany = 1
+        howManyAvg = 1
     whatDice = input("What dice would you like to roll? [d4, d6, d8, d10, d12, d20, d100] ")
     rollMod = input("What would you like to add to the roll? ")
     if(rollMod.isnumeric() == True):
@@ -46,16 +55,19 @@ def rollSpecsRigged(roll):
         rollRiggedDice(roll,whatDice)
         howMany -= 1
     roll.append(rollMod)
-    total(roll,rollMod)
+    total(roll,rollMod,howManyAvg)
     
 def rollSpecsBad(roll):
     howMany = 0
+    howManyAvg = 0
     howMany = input("How many dice do you want to roll? ")
     if(howMany.isnumeric() == True):
         howMany = int(howMany)
+        howManyAvg = int(howMany)
     else:
         print("That is not a number, defaulting to 1")
         howMany = 1
+        howManyAvg = 1
     whatDice = input("What dice would you like to roll? [d4, d6, d8, d10, d12, d20, d100] ")
     rollMod = input("What would you like to add to the roll? ")
     if(rollMod.isnumeric() == True):
@@ -67,7 +79,7 @@ def rollSpecsBad(roll):
         rollBadDice(roll,whatDice)
         howMany -= 1
     roll.append(rollMod)
-    total(roll,rollMod)
+    total(roll,rollMod,howManyAvg)
 
 def rollADice(roll,whatDice):
     rollTemp = 0
@@ -141,9 +153,15 @@ def rollBadDice(roll, whatDice):
     print(rollTemp," Rolled")
     roll.append(rollTemp)
 
-def total(roll,rollMod):
+def total(roll,rollMod,howManyAvg):
     rollTotal = sum(roll)
-    print(rollTotal," is the current total (",rollMod,"added to total [",rollTotal-rollMod,"total-mod] )")
+    rollAverage = sum(roll)/howManyAvg
+    rollAverage = round(rollAverage,1)
+    print("|")
+    print(rollTotal," is the current total")
+    print(rollMod,"was added to the total)")
+    print(rollAverage,"is the average roll")
+    print("|")
 
 def rollSpecialNumber():
     floatOrInt = input("Do you want the numbers to include decimals in the roll? [y or n] ")
