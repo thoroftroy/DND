@@ -20,11 +20,11 @@ createAffList = ["Creation","Destruction","Renewal","Decay"]
 
 #player/npc affinity
 savedNpcList = ["Alex","Master","Apprentice","Daggan","Random Master","Random Basic"]
-affinityTypes = ["Crafting","Fire","Earth","Water","Air","Utility","Physical","Creation"]
-alexAffinityTypes = [-10,   -10,    -10,    -10,    -10,    -10,    -10,        -10]
-masterAffinityTypes = [6,     2,      2,      2,      2,      2,      1,          0]
-apprenticeAffinityTypes = [3, 0,      0,      0,      0,      0,     -5,         -7]
-dagganAffinityTypes = [5,     8,      4,     -3,      5,      2,      1,         10]
+affinityTypes = ["Crafting","Fire","Earth","Water","Air","Utility","Physical","Creation","Generic"]
+alexAffinityTypes = [-10,   -10,    -10,    -10,    -10,    -10,    -10,        -10,        0]
+masterAffinityTypes = [6,     2,      2,      2,      2,      2,      1,          0,        0]
+apprenticeAffinityTypes = [3, 0,      0,      0,      0,      0,     -5,         -7,        0]
+dagganAffinityTypes = [5,     8,      4,     -3,      5,      2,      1,         10,        0]
 
 def showPowerScale(percentage):
     if percentage == 0:
@@ -55,8 +55,8 @@ def showPowerScale(percentage):
 def calcRunePowerAuto(runesInSpell):
     #choose who you are automating for
     #randomize the random npcs
-    randomizedMasterAffinityTypes = [random.randint(0,8),random.randint(0,8),random.randint(0,8),random.randint(0,8),random.randint(0,8),random.randint(0,8),random.randint(0,10),random.randint(0,8)]
-    randomizedBasicAffinityTypes = [random.randint(-10,5),random.randint(-10,5),random.randint(-10,5),random.randint(-10,5),random.randint(-10,5),random.randint(-10,5),random.randint(-10,5),random.randint(-10,5)]
+    randomizedMasterAffinityTypes = [random.randint(0,8),random.randint(0,8),random.randint(0,8),random.randint(0,8),random.randint(0,8),random.randint(0,8),random.randint(0,10),random.randint(0,8),random.randint(0,5)]
+    randomizedBasicAffinityTypes = [random.randint(-10,5),random.randint(-10,5),random.randint(-10,5),random.randint(-10,5),random.randint(-10,5),random.randint(-10,5),random.randint(-10,5),random.randint(-10,5),random.randint(0,2)]
     print("Please select an NPC or player from the following list, type their entire name as seen in the list with capitalization.")
     print(savedNpcList)
     choose = input()
@@ -216,7 +216,29 @@ def calcRunePowerAuto(runesInSpell):
                 time.sleep(0.5)
                 main()
             i += 1
-            
+        #now we add the generic modifier
+        if "Alex" == choose:
+            sumOfAffinities += alexAffinityTypes[8]
+            print("Adding generic modifier of:",alexAffinityTypes[8])
+        elif "Master" == choose:
+            sumOfAffinities += masterAffinityTypes[8]
+            print("Adding generic modifier of:",masterAffinityTypes[8])
+        elif "Apprentice" == choose:
+            sumOfAffinities += apprenticeAffinityTypes[8]
+            print("Adding generic modifier of:",apprenticeAffinityTypes[8])
+        elif "Daggan" == choose:
+            sumOfAffinities += dagganAffinityTypes[8]
+            print("Adding generic modifier of:",dagganAffinityTypes[8])
+        elif "Random Master" == choose:
+            sumOfAffinities += randomizedMasterAffinityTypes[8]
+            print("Adding generic modifier of:",randomizedMasterAffinityTypes[8])
+        elif "Random Basic" == choose:
+            sumOfAffinities += randomizedBasicAffinityTypes[8]
+            print("Adding generic modifier of:",randomizedBasicAffinityTypes[8])
+        else:
+                    print("Something went very wrong, aborting...")
+                    time.sleep(0.5)
+                    main()
         #next we roll a dice
         devider = random.randint(1,20)
         devider = devider
