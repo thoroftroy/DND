@@ -2,9 +2,8 @@
 This is for things that help with my dungeons and dragons stuff
 ------------------------------------
 Just some damage caclulations, maybe a boss fight or cataluoge later. Simply run the program from the terminal to use the program.
-In linux type 'python3 locktester.py' or whatever the name of the program is.
-In windows type 'python locktester.py' or whatever the name of the program is. 
-Make sure that the terminal is open in the directory that the file is saved in or cd into it. 
+The best way to run any of them is to run the run.py file and then select them. You can acutally use that run.py file with any grouping of python files, its universal. 
+Now I know that I don't have a description of all of the files in here but you can look at them and figure it out pretty easily. 
 
 
 Force Calculator
