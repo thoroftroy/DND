@@ -64,6 +64,33 @@ while True:
         
         print("\nPress Enter to update the game board, press 'j' to jump 'B', or press 'q' to change dimensions.")
         
+         # Check if 'B' landed on the same tile as 'U', 'O', or 'X'
+        overlapped_character = None
+        overlapped_type = ''
+        
+        for uncommon in uncommons:
+            if uncommon['x'] == special_char['x'] and uncommon['y'] == special_char['y']:
+                overlapped_character = uncommon
+                overlapped_type = 'U'
+                break
+        
+        if not overlapped_character:
+            for enemy in enemies:
+                if enemy['x'] == special_char['x'] and enemy['y'] == special_char['y']:
+                    overlapped_character = enemy
+                    overlapped_type = 'O'
+                    break
+        
+        if not overlapped_character:
+            for player in players:
+                if player['x'] == special_char['x'] and player['y'] == special_char['y']:
+                    overlapped_character = player
+                    overlapped_type = 'X'
+                    break
+        
+        if overlapped_character:
+            print(f"'{overlapped_type}' character landed on 'B' at", chr(65 + special_char['x']) + str(special_char['y'] + 1))
+        
         choice = input()
         if choice == '':
             # Generate random positions for X, O, and U characters
