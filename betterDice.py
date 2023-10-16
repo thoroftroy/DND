@@ -42,16 +42,29 @@ while True:
     if input_str.lower() == 'q':
         break
     
-    input_parts = input_str.lower().split()  # Convert to lowercase
-    
-    if len(input_parts) == 2 and input_parts[0] == 'bad' or input_parts[0] == 'good':
-        num_dice, sides = map(int, input_parts[1].split('d'))
+    if input_str == "d4":
+        print("Rolled: ",random.randint(1,4))
+    elif input_str == "d6":
+        print("Rolled: ",random.randint(1,6))
+    elif input_str == "d8":
+        print("Rolled: ",random.randint(1,8))
+    elif input_str == "d10":
+        print("Rolled: ",random.randint(1,10))
+    elif input_str == "d12":
+        print("Rolled: ",random.randint(1,12))
+    elif input_str == "d20":
+        print("Rolled: ",random.randint(1,20))
     else:
-        num_dice, sides = map(int, input_str.split('d'))
+        input_parts = input_str.lower().split()  # Convert to lowercase
         
-    if input_parts[0] == 'bad':
-        bad_weighted_dice(num_dice, sides)
-    elif input_parts[0] == 'good':
-        good_weighted_dice(num_dice, sides)
-    else:
-        roll_dice(num_dice, sides)
+        if len(input_parts) == 2 and input_parts[0] == 'bad' or input_parts[0] == 'good':
+            num_dice, sides = map(int, input_parts[1].split('d'))
+        else:
+            num_dice, sides = map(int, input_str.split('d'))
+            
+        if input_parts[0] == 'bad':
+            bad_weighted_dice(num_dice, sides)
+        elif input_parts[0] == 'good':
+            good_weighted_dice(num_dice, sides)
+        else:
+            roll_dice(num_dice, sides)
